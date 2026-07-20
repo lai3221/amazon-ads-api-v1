@@ -1,0 +1,36 @@
+name: OpenAPI drift
+
+on:
+  schedule:
+    - cron: "17 3 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    name: Detect upstream specification changes
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: "8.2"
+          coverage: none
+          tools: composer:v2
+
+      - name: Download official full specification
+        run: >-
+          curl --fail --location
+          'https://d1y2lf8k3vrkfu.cloudfront.net/openapi/en-us/dest/AmazonAdsAPIALLMerged_prod_3p_ALL.json'
+          --output .openapi/amazon-ads-v1-all.json
+
+      - name: Regenerate SDK
+        run: composer generate
+
+      - name: Fail when the official specification changed
+        run: git diff --exit-code

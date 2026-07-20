@@ -1,0 +1,83 @@
+{
+    "name": "lai3221/amazon-ads-api-v1",
+    "description": "A complete Laravel 11 SDK generated from the Amazon Ads API v1 full OpenAPI specification.",
+    "keywords": [
+        "amazon-ads",
+        "amazon-advertising",
+        "laravel",
+        "openapi",
+        "sdk"
+    ],
+    "homepage": "https://github.com/lai3221/amazon-ads-api-v1",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "lai3221"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "ext-json": "*",
+        "guzzlehttp/guzzle": "^7.9",
+        "illuminate/contracts": "^11.0",
+        "illuminate/support": "^11.0",
+        "psr/log": "^3.0",
+        "psr/simple-cache": "^3.0"
+    },
+    "require-dev": {
+        "laravel/pint": "^1.18",
+        "orchestra/testbench": "^9.0",
+        "phpstan/phpstan": "^2.1",
+        "phpunit/phpunit": "^11.5",
+        "squizlabs/php_codesniffer": "^3.11"
+    },
+    "autoload": {
+        "psr-4": {
+            "Lai3221\\AmazonAdsApiV1\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Lai3221\\AmazonAdsApiV1\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "generate": "php tools/generate-sdk.php .openapi/amazon-ads-v1-all.json",
+        "spec:check": "php tools/verify-coverage.php .openapi/amazon-ads-v1-all.json",
+        "format": "pint",
+        "format:check": "pint --test",
+        "lint": "phpcs --standard=phpcs.xml",
+        "analyse": "phpstan analyse --memory-limit=1G",
+        "test": "phpunit",
+        "check": [
+            "@spec:check",
+            "@format:check",
+            "@lint",
+            "@analyse",
+            "@test"
+        ]
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Lai3221\\AmazonAdsApiV1\\Laravel\\AmazonAdsServiceProvider"
+            ],
+            "aliases": {
+                "AmazonAds": "Lai3221\\AmazonAdsApiV1\\Laravel\\Facades\\AmazonAds"
+            }
+        },
+        "branch-alias": {
+            "dev-main": "1.x-dev"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "php-http/discovery": false
+        },
+        "optimize-autoloader": true,
+        "sort-packages": true
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}

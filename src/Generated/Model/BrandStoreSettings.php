@@ -1,0 +1,612 @@
+<?php
+
+declare(strict_types=1);
+
+namespace Lai3221\AmazonAdsApiV1\Generated\Model;
+
+use Lai3221\AmazonAdsApiV1\Model\AbstractModel;
+
+/**
+ * Represents the BrandStoreSettings schema from Amazon Ads API v1.
+ *
+ * @generated from Amazon Ads API v1 schema BrandStoreSettings.
+ */
+final class BrandStoreSettings extends AbstractModel
+{
+    /**
+     * The exact component schema name from the Amazon OpenAPI document.
+     */
+    public const OPENAPI_NAME = 'BrandStoreSettings';
+
+    /**
+     * Generated definitions used for hydration and validation.
+     *
+     * @var array<string, array<string, mixed>>
+     */
+    protected const ATTRIBUTE_DEFINITIONS = [
+        'additionalHtml' => [
+            'type' => 'string',
+            'required' => false,
+            'nullable' => false,
+        ],
+        'bodyText' => [
+            'type' => 'array',
+            'items' => [
+                'type' => 'string',
+            ],
+            'required' => false,
+            'nullable' => false,
+            'minItems' => 0,
+            'maxItems' => 5,
+        ],
+        'brand' => [
+            'type' => 'string',
+            'required' => true,
+            'nullable' => false,
+        ],
+        'callToActions' => [
+            'type' => 'model',
+            'class' => BrandStoreCallToAction::class,
+            'required' => true,
+            'nullable' => false,
+        ],
+        'clickTrackingUrls' => [
+            'type' => 'array',
+            'items' => [
+                'type' => 'model',
+                'class' => CreativeTrackingUrl::class,
+            ],
+            'required' => false,
+            'nullable' => false,
+            'minItems' => 0,
+            'maxItems' => 5,
+        ],
+        'creativeSizes' => [
+            'type' => 'array',
+            'items' => [
+                'type' => 'model',
+                'class' => Size::class,
+            ],
+            'required' => false,
+            'nullable' => false,
+            'minItems' => 0,
+            'maxItems' => 20,
+        ],
+        'disclaimers' => [
+            'type' => 'string',
+            'required' => false,
+            'nullable' => false,
+        ],
+        'headlines' => [
+            'type' => 'array',
+            'items' => [
+                'type' => 'string',
+            ],
+            'required' => true,
+            'nullable' => false,
+            'minItems' => 1,
+            'maxItems' => 5,
+        ],
+        'impressionTrackingUrls' => [
+            'type' => 'array',
+            'items' => [
+                'type' => 'model',
+                'class' => CreativeTrackingUrl::class,
+            ],
+            'required' => false,
+            'nullable' => false,
+            'minItems' => 0,
+            'maxItems' => 5,
+        ],
+        'inventoryTypes' => [
+            'type' => 'array',
+            'items' => [
+                'type' => 'enum',
+                'class' => ComponentInventoryType::class,
+            ],
+            'required' => true,
+            'nullable' => false,
+            'minItems' => 1,
+            'maxItems' => 2,
+        ],
+        'language' => [
+            'type' => 'enum',
+            'class' => LanguageLocale::class,
+            'required' => true,
+            'nullable' => false,
+        ],
+        'logos' => [
+            'type' => 'model',
+            'class' => Image::class,
+            'required' => false,
+            'nullable' => false,
+        ],
+        'optimizationGoalKpi' => [
+            'type' => 'enum',
+            'class' => CreativeOptimizationGoalKpi::class,
+            'required' => true,
+            'nullable' => false,
+        ],
+        'responsiveSizingBehavior' => [
+            'type' => 'enum',
+            'class' => ResponsiveSizingBehavior::class,
+            'required' => true,
+            'nullable' => false,
+        ],
+        'squareImages' => [
+            'type' => 'array',
+            'items' => [
+                'type' => 'model',
+                'class' => Image::class,
+            ],
+            'required' => true,
+            'nullable' => false,
+            'minItems' => 1,
+            'maxItems' => 5,
+        ],
+        'tallImages' => [
+            'type' => 'array',
+            'items' => [
+                'type' => 'model',
+                'class' => Image::class,
+            ],
+            'required' => true,
+            'nullable' => false,
+            'minItems' => 1,
+            'maxItems' => 5,
+        ],
+        'wideImages' => [
+            'type' => 'array',
+            'items' => [
+                'type' => 'model',
+                'class' => Image::class,
+            ],
+            'required' => true,
+            'nullable' => false,
+            'minItems' => 1,
+            'maxItems' => 5,
+        ],
+    ];
+
+    /**
+     * Returns Additional HTML to include with the render response for display inventory targets..
+     *
+     * @return string|null
+     */
+    public function getAdditionalHtml(): ?string
+    {
+        /** @var string|null $value */
+        $value = $this->getAttribute('additionalHtml');
+
+        return $value;
+    }
+
+    /**
+     * Sets Additional HTML to include with the render response for display inventory targets..
+     *
+     * @param string|null $value New property value.
+     * @return $this
+     */
+    public function setAdditionalHtml(?string $value): self
+    {
+        $this->setAttribute('additionalHtml', $value);
+
+        return $this;
+    }
+
+    /**
+     * Returns The body text to use for the Brand Store Creative experience..
+     *
+     * @return list<string>|null
+     */
+    public function getBodyText(): ?array
+    {
+        /** @var list<string>|null $value */
+        $value = $this->getAttribute('bodyText');
+
+        return $value;
+    }
+
+    /**
+     * Sets The body text to use for the Brand Store Creative experience..
+     *
+     * @param list<string>|null $value New property value.
+     * @return $this
+     */
+    public function setBodyText(?array $value): self
+    {
+        $this->setAttribute('bodyText', $value);
+
+        return $this;
+    }
+
+    /**
+     * Returns The brand of the product(s) being advertised..
+     *
+     * @return string|null
+     */
+    public function getBrand(): ?string
+    {
+        /** @var string|null $value */
+        $value = $this->getAttribute('brand');
+
+        return $value;
+    }
+
+    /**
+     * Sets The brand of the product(s) being advertised..
+     *
+     * @param string|null $value New property value.
+     * @return $this
+     */
+    public function setBrand(?string $value): self
+    {
+        $this->setAttribute('brand', $value);
+
+        return $this;
+    }
+
+    /**
+     * Returns the callToActions value.
+     *
+     * @return BrandStoreCallToAction|null
+     */
+    public function getCallToActions(): ?BrandStoreCallToAction
+    {
+        /** @var BrandStoreCallToAction|null $value */
+        $value = $this->getAttribute('callToActions');
+
+        return $value;
+    }
+
+    /**
+     * Sets the callToActions value.
+     *
+     * @param BrandStoreCallToAction|array<string, mixed>|null $value New property value.
+     * @return $this
+     */
+    public function setCallToActions(BrandStoreCallToAction|array|null $value): self
+    {
+        $this->setAttribute('callToActions', $value);
+
+        return $this;
+    }
+
+    /**
+     * Returns The third party urls to trigger when an click is recorded..
+     *
+     * @return list<CreativeTrackingUrl>|null
+     */
+    public function getClickTrackingUrls(): ?array
+    {
+        /** @var list<CreativeTrackingUrl>|null $value */
+        $value = $this->getAttribute('clickTrackingUrls');
+
+        return $value;
+    }
+
+    /**
+     * Sets The third party urls to trigger when an click is recorded..
+     *
+     * @param list<CreativeTrackingUrl>|null $value New property value.
+     * @return $this
+     */
+    public function setClickTrackingUrls(?array $value): self
+    {
+        $this->setAttribute('clickTrackingUrls', $value);
+
+        return $this;
+    }
+
+    /**
+     * Returns The placement sizes this creative should serve on..
+     *
+     * @return list<Size>|null
+     */
+    public function getCreativeSizes(): ?array
+    {
+        /** @var list<Size>|null $value */
+        $value = $this->getAttribute('creativeSizes');
+
+        return $value;
+    }
+
+    /**
+     * Sets The placement sizes this creative should serve on..
+     *
+     * @param list<Size>|null $value New property value.
+     * @return $this
+     */
+    public function setCreativeSizes(?array $value): self
+    {
+        $this->setAttribute('creativeSizes', $value);
+
+        return $this;
+    }
+
+    /**
+     * Returns The disclaimers to use for the Brand Store Creative experience..
+     *
+     * @return string|null
+     */
+    public function getDisclaimers(): ?string
+    {
+        /** @var string|null $value */
+        $value = $this->getAttribute('disclaimers');
+
+        return $value;
+    }
+
+    /**
+     * Sets The disclaimers to use for the Brand Store Creative experience..
+     *
+     * @param string|null $value New property value.
+     * @return $this
+     */
+    public function setDisclaimers(?string $value): self
+    {
+        $this->setAttribute('disclaimers', $value);
+
+        return $this;
+    }
+
+    /**
+     * Returns The headline(s) to use for the Brand Store Creative experience..
+     *
+     * @return list<string>|null
+     */
+    public function getHeadlines(): ?array
+    {
+        /** @var list<string>|null $value */
+        $value = $this->getAttribute('headlines');
+
+        return $value;
+    }
+
+    /**
+     * Sets The headline(s) to use for the Brand Store Creative experience..
+     *
+     * @param list<string>|null $value New property value.
+     * @return $this
+     */
+    public function setHeadlines(?array $value): self
+    {
+        $this->setAttribute('headlines', $value);
+
+        return $this;
+    }
+
+    /**
+     * Returns The third party urls to trigger when an impression is recorded..
+     *
+     * @return list<CreativeTrackingUrl>|null
+     */
+    public function getImpressionTrackingUrls(): ?array
+    {
+        /** @var list<CreativeTrackingUrl>|null $value */
+        $value = $this->getAttribute('impressionTrackingUrls');
+
+        return $value;
+    }
+
+    /**
+     * Sets The third party urls to trigger when an impression is recorded..
+     *
+     * @param list<CreativeTrackingUrl>|null $value New property value.
+     * @return $this
+     */
+    public function setImpressionTrackingUrls(?array $value): self
+    {
+        $this->setAttribute('impressionTrackingUrls', $value);
+
+        return $this;
+    }
+
+    /**
+     * Returns The inventory types this creative should serve on..
+     *
+     * @return list<ComponentInventoryType>|null
+     */
+    public function getInventoryTypes(): ?array
+    {
+        /** @var list<ComponentInventoryType>|null $value */
+        $value = $this->getAttribute('inventoryTypes');
+
+        return $value;
+    }
+
+    /**
+     * Sets The inventory types this creative should serve on..
+     *
+     * @param list<ComponentInventoryType>|null $value New property value.
+     * @return $this
+     */
+    public function setInventoryTypes(?array $value): self
+    {
+        $this->setAttribute('inventoryTypes', $value);
+
+        return $this;
+    }
+
+    /**
+     * Returns the language value.
+     *
+     * @return LanguageLocale|null
+     */
+    public function getLanguage(): ?LanguageLocale
+    {
+        /** @var LanguageLocale|null $value */
+        $value = $this->getAttribute('language');
+
+        return $value;
+    }
+
+    /**
+     * Sets the language value.
+     *
+     * @param LanguageLocale|string|null $value New property value.
+     * @return $this
+     */
+    public function setLanguage(LanguageLocale|string|null $value): self
+    {
+        $this->setAttribute('language', $value);
+
+        return $this;
+    }
+
+    /**
+     * Returns the logos value.
+     *
+     * @return Image|null
+     */
+    public function getLogos(): ?Image
+    {
+        /** @var Image|null $value */
+        $value = $this->getAttribute('logos');
+
+        return $value;
+    }
+
+    /**
+     * Sets the logos value.
+     *
+     * @param Image|array<string, mixed>|null $value New property value.
+     * @return $this
+     */
+    public function setLogos(Image|array|null $value): self
+    {
+        $this->setAttribute('logos', $value);
+
+        return $this;
+    }
+
+    /**
+     * Returns the optimizationGoalKpi value.
+     *
+     * @return CreativeOptimizationGoalKpi|null
+     */
+    public function getOptimizationGoalKpi(): ?CreativeOptimizationGoalKpi
+    {
+        /** @var CreativeOptimizationGoalKpi|null $value */
+        $value = $this->getAttribute('optimizationGoalKpi');
+
+        return $value;
+    }
+
+    /**
+     * Sets the optimizationGoalKpi value.
+     *
+     * @param CreativeOptimizationGoalKpi|string|null $value New property value.
+     * @return $this
+     */
+    public function setOptimizationGoalKpi(CreativeOptimizationGoalKpi|string|null $value): self
+    {
+        $this->setAttribute('optimizationGoalKpi', $value);
+
+        return $this;
+    }
+
+    /**
+     * Returns the responsiveSizingBehavior value.
+     *
+     * @return ResponsiveSizingBehavior|null
+     */
+    public function getResponsiveSizingBehavior(): ?ResponsiveSizingBehavior
+    {
+        /** @var ResponsiveSizingBehavior|null $value */
+        $value = $this->getAttribute('responsiveSizingBehavior');
+
+        return $value;
+    }
+
+    /**
+     * Sets the responsiveSizingBehavior value.
+     *
+     * @param ResponsiveSizingBehavior|string|null $value New property value.
+     * @return $this
+     */
+    public function setResponsiveSizingBehavior(ResponsiveSizingBehavior|string|null $value): self
+    {
+        $this->setAttribute('responsiveSizingBehavior', $value);
+
+        return $this;
+    }
+
+    /**
+     * Returns The square image(s) to use..
+     *
+     * @return list<Image>|null
+     */
+    public function getSquareImages(): ?array
+    {
+        /** @var list<Image>|null $value */
+        $value = $this->getAttribute('squareImages');
+
+        return $value;
+    }
+
+    /**
+     * Sets The square image(s) to use..
+     *
+     * @param list<Image>|null $value New property value.
+     * @return $this
+     */
+    public function setSquareImages(?array $value): self
+    {
+        $this->setAttribute('squareImages', $value);
+
+        return $this;
+    }
+
+    /**
+     * Returns The tall image(s) to use..
+     *
+     * @return list<Image>|null
+     */
+    public function getTallImages(): ?array
+    {
+        /** @var list<Image>|null $value */
+        $value = $this->getAttribute('tallImages');
+
+        return $value;
+    }
+
+    /**
+     * Sets The tall image(s) to use..
+     *
+     * @param list<Image>|null $value New property value.
+     * @return $this
+     */
+    public function setTallImages(?array $value): self
+    {
+        $this->setAttribute('tallImages', $value);
+
+        return $this;
+    }
+
+    /**
+     * Returns The wide image(s) to use..
+     *
+     * @return list<Image>|null
+     */
+    public function getWideImages(): ?array
+    {
+        /** @var list<Image>|null $value */
+        $value = $this->getAttribute('wideImages');
+
+        return $value;
+    }
+
+    /**
+     * Sets The wide image(s) to use..
+     *
+     * @param list<Image>|null $value New property value.
+     * @return $this
+     */
+    public function setWideImages(?array $value): self
+    {
+        $this->setAttribute('wideImages', $value);
+
+        return $this;
+    }
+}

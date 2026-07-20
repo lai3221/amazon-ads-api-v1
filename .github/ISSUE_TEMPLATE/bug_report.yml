@@ -1,0 +1,48 @@
+name: Bug report
+description: Report a reproducible SDK defect.
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: Do not include access tokens, refresh tokens, client secrets, account data, or unsanitized response bodies.
+  - type: input
+    id: version
+    attributes:
+      label: Package version
+      placeholder: 1.0.0
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: PHP and Laravel versions
+      placeholder: PHP 8.3, Laravel 11.20
+    validations:
+      required: true
+  - type: input
+    id: operation
+    attributes:
+      label: Operation ID or schema
+      placeholder: CreateCampaign
+  - type: textarea
+    id: behavior
+    attributes:
+      label: Actual behavior
+      description: Provide a sanitized, minimal reproduction.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: checkboxes
+    id: sensitive
+    attributes:
+      label: Sensitive data check
+      options:
+        - label: I removed all credentials and advertiser/customer data.
+          required: true

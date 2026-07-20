@@ -1,0 +1,102 @@
+<?php
+
+declare(strict_types=1);
+
+namespace Lai3221\AmazonAdsApiV1\Generated\Model;
+
+use Lai3221\AmazonAdsApiV1\Model\AbstractModel;
+
+/**
+ * Represents the GeoLocationMultiStatusResponse schema from Amazon Ads API v1.
+ *
+ * @generated from Amazon Ads API v1 schema GeoLocationMultiStatusResponse.
+ */
+final class GeoLocationMultiStatusResponse extends AbstractModel
+{
+    /**
+     * The exact component schema name from the Amazon OpenAPI document.
+     */
+    public const OPENAPI_NAME = 'GeoLocationMultiStatusResponse';
+
+    /**
+     * Generated definitions used for hydration and validation.
+     *
+     * @var array<string, array<string, mixed>>
+     */
+    protected const ATTRIBUTE_DEFINITIONS = [
+        'error' => [
+            'type' => 'array',
+            'items' => [
+                'type' => 'model',
+                'class' => ErrorsIndex::class,
+            ],
+            'required' => false,
+            'nullable' => false,
+            'minItems' => 0,
+            'maxItems' => 100,
+        ],
+        'success' => [
+            'type' => 'array',
+            'items' => [
+                'type' => 'model',
+                'class' => GeoLocationMultiStatusSuccess::class,
+            ],
+            'required' => false,
+            'nullable' => false,
+            'minItems' => 0,
+            'maxItems' => 100,
+        ],
+    ];
+
+    /**
+     * Returns the error value.
+     *
+     * @return list<ErrorsIndex>|null
+     */
+    public function getError(): ?array
+    {
+        /** @var list<ErrorsIndex>|null $value */
+        $value = $this->getAttribute('error');
+
+        return $value;
+    }
+
+    /**
+     * Sets the error value.
+     *
+     * @param list<ErrorsIndex>|null $value New property value.
+     * @return $this
+     */
+    public function setError(?array $value): self
+    {
+        $this->setAttribute('error', $value);
+
+        return $this;
+    }
+
+    /**
+     * Returns the success value.
+     *
+     * @return list<GeoLocationMultiStatusSuccess>|null
+     */
+    public function getSuccess(): ?array
+    {
+        /** @var list<GeoLocationMultiStatusSuccess>|null $value */
+        $value = $this->getAttribute('success');
+
+        return $value;
+    }
+
+    /**
+     * Sets the success value.
+     *
+     * @param list<GeoLocationMultiStatusSuccess>|null $value New property value.
+     * @return $this
+     */
+    public function setSuccess(?array $value): self
+    {
+        $this->setAttribute('success', $value);
+
+        return $this;
+    }
+}

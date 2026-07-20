@@ -1,0 +1,23 @@
+name: Feature request
+description: Propose an SDK runtime, generator, or documentation improvement.
+title: "[Feature]: "
+labels:
+  - enhancement
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: Explain the use case and why the existing SDK surface is insufficient.
+    validations:
+      required: true
+  - type: input
+    id: operation
+    attributes:
+      label: Related operation ID or schema
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+    validations:
+      required: true

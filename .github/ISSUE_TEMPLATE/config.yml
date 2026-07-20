@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Amazon Ads API support
+    url: https://advertising.amazon.com/API/docs/en-us/support/overview
+    about: Use official support for onboarding, account access, permissions, and beta allowlisting.
+  - name: Security vulnerability
+    url: https://github.com/lai3221/amazon-ads-api-v1/security/advisories/new
+    about: Privately report a suspected SDK vulnerability.

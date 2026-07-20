@@ -1,0 +1,23 @@
+{
+    "preset": "psr12",
+    "rules": {
+        "array_indentation": true,
+        "concat_space": {
+            "spacing": "one"
+        },
+        "ordered_imports": {
+            "sort_algorithm": "alpha"
+        },
+        "trailing_comma_in_multiline": {
+            "elements": [
+                "arguments",
+                "arrays",
+                "match",
+                "parameters"
+            ]
+        }
+    },
+    "exclude": [
+        "vendor"
+    ]
+}
