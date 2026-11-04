@@ -1,6 +1,6 @@
-# Amazon Ads API v1 Laravel 11 SDK
+# Amazon Ads API v1 Laravel 11 / 12 SDK
 
-这是一个基于 Amazon 官方 **Amazon Ads API v1 full specification** 自动生成的 Laravel 11 SDK，Composer 包名为 `lai3221/amazon-ads-api-v1`。
+这是一个基于 Amazon 官方 **Amazon Ads API v1 full specification** 自动生成的 Laravel 11 / 12 SDK，Composer 包名为 `lai3221/amazon-ads-api-v1`。
 
 当前规范覆盖正式发布和 beta 的 v1 API，不包含旧版 v0 API。完整生成结果包括：
 
@@ -18,6 +18,8 @@
 > 完整规范包含 beta API。Closed beta 仍需要 Amazon 为 Client ID 开通权限；SDK 中存在方法并不代表账号自动取得访问权。
 
 ## 安装
+
+要求 PHP 8.2 或更高版本，支持 Laravel 11 和 12。运行时依赖保留 Laravel 11 的兼容范围，开发和 CI 使用 Laravel 12 / Orchestra Testbench 10，并覆盖 PHP 8.2、8.3 和 8.4。Laravel 11 已于 2026 年 3 月 12 日结束安全支持，维护中的应用建议使用 Laravel 12，详见 [Laravel 支持政策](https://laravel.com/docs/12.x/releases#support-policy)。
 
 ```bash
 composer require lai3221/amazon-ads-api-v1

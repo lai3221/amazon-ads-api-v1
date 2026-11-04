@@ -1,6 +1,6 @@
 {
     "name": "lai3221/amazon-ads-api-v1",
-    "description": "A complete Laravel 11 SDK generated from the Amazon Ads API v1 full OpenAPI specification.",
+    "description": "A complete Laravel 11 and 12 SDK generated from the Amazon Ads API v1 full OpenAPI specification.",
     "keywords": [
         "amazon-ads",
         "amazon-advertising",
@@ -20,14 +20,14 @@
         "php": "^8.2",
         "ext-json": "*",
         "guzzlehttp/guzzle": "^7.9",
-        "illuminate/contracts": "^11.0",
-        "illuminate/support": "^11.0",
+        "illuminate/contracts": "^11.0 || ^12.0",
+        "illuminate/support": "^11.0 || ^12.0",
         "psr/log": "^3.0",
         "psr/simple-cache": "^3.0"
     },
     "require-dev": {
         "laravel/pint": "^1.18",
-        "orchestra/testbench": "^9.0",
+        "orchestra/testbench": "^10.0",
         "phpstan/phpstan": "^2.1",
         "phpunit/phpunit": "^11.5",
         "squizlabs/php_codesniffer": "^3.11"
@@ -45,8 +45,8 @@
     "scripts": {
         "generate": "php tools/generate-sdk.php .openapi/amazon-ads-v1-all.json",
         "spec:check": "php tools/verify-coverage.php .openapi/amazon-ads-v1-all.json",
-        "format": "pint",
-        "format:check": "pint --test",
+        "format": "pint src tests tools config",
+        "format:check": "pint --test src tests tools config",
         "lint": "phpcs --standard=phpcs.xml",
         "analyse": "phpstan analyse --memory-limit=1G",
         "test": "phpunit",

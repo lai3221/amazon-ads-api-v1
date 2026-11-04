@@ -1,10 +1,10 @@
-# Amazon Ads API v1 SDK for Laravel 11
+# Amazon Ads API v1 SDK for Laravel 11 and 12
 
 [![CI](https://github.com/lai3221/amazon-ads-api-v1/actions/workflows/ci.yml/badge.svg)](https://github.com/lai3221/amazon-ads-api-v1/actions/workflows/ci.yml)
 [![Latest Stable Version](https://poser.pugx.org/lai3221/amazon-ads-api-v1/v/stable)](https://packagist.org/packages/lai3221/amazon-ads-api-v1)
 [![License](https://poser.pugx.org/lai3221/amazon-ads-api-v1/license)](LICENSE)
 
-A complete, generated Laravel 11 SDK for the **Amazon Ads API v1 full specification**. The bundled specification combines generally available and beta v1 operations. It does not include legacy Amazon Ads API v0 endpoints.
+A complete, generated Laravel 11 and 12 SDK for the **Amazon Ads API v1 full specification**. The bundled specification combines generally available and beta v1 operations. It does not include legacy Amazon Ads API v0 endpoints.
 
 The package currently contains:
 
@@ -23,8 +23,10 @@ See the [complete generated API index](docs/API_REFERENCE.md). A Chinese guide i
 ## Requirements
 
 - PHP 8.2 or later
-- Laravel 11
+- Laravel 11 or 12
 - An approved Amazon Ads API application and Login with Amazon credentials
+
+Laravel 11 remains in the runtime dependency constraints for existing applications. Development and CI use Laravel 12 with Orchestra Testbench 10 on PHP 8.2–8.4. Laravel 11 reached the end of security support on March 12, 2026; use Laravel 12 for maintained applications. See the [Laravel support policy](https://laravel.com/docs/12.x/releases#support-policy).
 
 ## Installation
 

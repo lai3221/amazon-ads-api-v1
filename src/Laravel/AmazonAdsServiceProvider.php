@@ -23,7 +23,7 @@ use Psr\Log\LoggerInterface;
 use Psr\Log\NullLogger;
 
 /**
- * Registers the Amazon Ads API v1 SDK with a Laravel 11 application.
+ * Registers the Amazon Ads API v1 SDK with a Laravel application.
  */
 final class AmazonAdsServiceProvider extends ServiceProvider
 {

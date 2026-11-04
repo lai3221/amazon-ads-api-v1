@@ -11,7 +11,7 @@ use Lai3221\AmazonAdsApiV1\Tests\TestCase;
 use PHPUnit\Framework\Attributes\Test;
 
 /**
- * Verifies Laravel 11 package discovery, container bindings, and facade access.
+ * Verifies Laravel package discovery, container bindings, and facade access.
  */
 final class LaravelIntegrationTest extends TestCase
 {
