@@ -39,6 +39,8 @@ AMAZON_ADS_MANAGER_ACCOUNT_ID=
 AMAZON_ADS_ACCEPT_LANGUAGE=zh-CN
 ```
 
+可以通过 `config/amazon-ads.php` 中的 `user_agent` 自定义 HTTP `User-Agent`，或在 `.env` 中设置 `AMAZON_ADS_USER_AGENT=MyApp/1.0`。默认值为 `lai3221-amazon-ads-api-v1/1.0`。
+
 ## 使用示例
 
 ```php

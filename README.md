@@ -55,6 +55,8 @@ AMAZON_ADS_ACCEPT_LANGUAGE=en-US
 
 Valid regions are `NA`, `EU`, and `FE`.
 
+Customize the HTTP `User-Agent` with `user_agent` in `config/amazon-ads.php` or set `AMAZON_ADS_USER_AGENT=MyApp/1.0` in `.env`. The default is `lai3221-amazon-ads-api-v1/1.0`.
+
 ## Quick start
 
 Every OpenAPI tag has an explicit client accessor, and every operation has an explicit method. Generated request models accept constructor arrays or fluent setters.

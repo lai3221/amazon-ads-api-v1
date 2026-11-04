@@ -59,6 +59,7 @@ final class AmazonAdsServiceProvider extends ServiceProvider
                 connectTimeout: (float) $config->get('amazon-ads.connect_timeout', 10),
                 maxRetries: (int) $config->get('amazon-ads.max_retries', 3),
                 retryBaseDelayMilliseconds: (int) $config->get('amazon-ads.retry_base_delay_ms', 250),
+                userAgent: (string) $config->get('amazon-ads.user_agent', 'lai3221-amazon-ads-api-v1/1.0'),
             );
         });
 

@@ -37,6 +37,7 @@ return [
     | Transport behavior
     |--------------------------------------------------------------------------
     */
+    'user_agent' => env('AMAZON_ADS_USER_AGENT', 'lai3221-amazon-ads-api-v1/1.0'),
     'timeout' => (float) env('AMAZON_ADS_TIMEOUT', 30),
     'connect_timeout' => (float) env('AMAZON_ADS_CONNECT_TIMEOUT', 10),
     'max_retries' => (int) env('AMAZON_ADS_MAX_RETRIES', 3),

@@ -6,6 +6,7 @@ All notable changes to this project will be documented in this file. The format 
 
 ### Added
 
+- Configurable HTTP `User-Agent` through Laravel's `amazon-ads.user_agent` setting and `AMAZON_ADS_USER_AGENT` environment variable.
 - Initial Laravel 11 package structure.
 - Login with Amazon authorization-code and refresh-token authentication.
 - Regional NA, EU, and FE HTTP transport with retries and typed errors.
